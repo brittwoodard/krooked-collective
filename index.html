@@ -41,6 +41,9 @@ founders:
      image-2: 
        background_image: uploads/images/krooked-collective-4.jpeg
        image_focus: 
+upcoming-events: 
+  heading: Upcoming Events
+  description_html: Fun description of the upcoming events. Are you a planner? If so, click "All Events" below.
 seo:
   title: Krooked Collective
   description: A community of performing artists evolving entertainment through collaborative, evocative and experiential content
@@ -91,4 +94,32 @@ seo:
         </div>
     </div>
     {% endfor %}
+</section>
+
+<!-- Upcoming Events -->
+<section id="featured-events">
+    <div>
+        <h2>{{page.upcoming-events.heading}}</h2>
+        <p>{{page.upcoming-events.description_html}}</p>
+    </div>
+
+    <div class="grid grid-cols-3 gap-4">
+
+        {% for item in site.events limit:3 %}    
+
+        <div>
+            <div class="bg-image-style landscape" style="background-image:url( '{{ item.featured_image }}' );"></div>
+            <div> 
+                {% for item in post.categories %}
+                <span class="tag"> {{item}} </span>
+                {% endfor %}
+
+                <h3 class="margin-t-1"> {{ post.title }} </h3>
+                <p> {{ post.description }} </p>
+                <a href="{{ post.url }}" class="subtle-button">Learn More</a>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
 </section>

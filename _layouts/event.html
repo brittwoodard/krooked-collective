@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+
+<section>
+    <div class="bg-image-style aspect-landscape grid grid-cols-12"></div>
+    <div class="col-span-7">
+        <h1>{{page.title}}</h1>
+        {% for item in page.categories %}
+        <span class="tag"> {{item}}</span>
+        {% endfor %}
+        <p>{{ page.date | date_to_long_string }}</p>
+        <a>Reserve Your Spot</a>
+    </div>
+    <div>
+
+        {{content}}
+
+    </div>
+
+</section>
