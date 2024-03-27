@@ -458,12 +458,40 @@ p:last-child {
         bottom: 0;
         z-index: -1;
     }
+.absolute {
+  position: absolute;
+}
+.top-0 {
+  top: 0px;
+}
+.flex {
+  display: flex;
+}
 .min-h-\[100vh\] {
   min-height: 100vh;
+}
+.w-full {
+  width: 100%;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
 }
 .bg-yellow-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .text-center {
   text-align: center;
