@@ -30,12 +30,30 @@
 
 @layer components {
 
+    /* Structure */
+    .middle-center {
+        @apply flex items-center justify-center
+      }
+
     .tag {
         @apply text-sm inline-block p-1 uppercase tracking-wide text-stone-600;
     }
 
     .button  {
         @apply inline-block px-4 py-2 uppercase tracking-wide bg-zinc-800 text-white ;
+    }
+
+    /* Images & Video */
+    .bg-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
     }
 
 }
