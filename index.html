@@ -6,6 +6,41 @@ header:
 about: 
   heading: About Krooked Collective
   description_html: Krooked Collective was established in 2024 by Aaron Kint, Emily Karn, Jessica "Diba" Bennett, and Mary Jo Bono. As a versatile production company, we cater to individuals dissatisfied with their current artistic enviornments, offering an escape for those seeking inspiration and collaboration. Our aim is to unite like-minded artists who aspire to challenge the limits of their creativity. Krooked Collective is a place for rebels, revolutionaries, and disruptors, leveraging technology to create an exensive network of artists.</p><p>We strongly believe in the power of collaboration as a pathway to the future, striving to curate experiences that push both artists and audiences beyond their comfort zones.
+founders: 
+  heading: Meet the founders
+  founders: 
+   - name_html: Aaron Kint / Krystal Something Something / Tabatha From Dance
+     description_html: Aaron Kint is the ultimate entertainment guru, rocking stages from Columbus to the Big Apple. His dazzling crew, Backspace, stole the show in Brooklyn from 2009-2013, while his alter ego, Krystal Something Something, set trends far and wide. You can spot Krystal in the limelight of "How You Get Famous" and even in the glossy pages of "dr.a.g." Armed with a B.F.A. in Dance, two decades of Nightlife expertise, fifteen DJ years under his belt, and a knack for multimedia magic, Aaron is the maestro of blending dance, theater, and drag into mind-blowing performances. Keep an eye out for his latest brainchild, Krooked Collective - it's about to shake up the arts scene!
+     image-1: 
+       background_image: /uploads/images/krooked-collective-7.jpeg
+       image_focus: 
+     image-2: 
+       background_image: /uploads/images/krooked-collective-8.jpeg
+       image_focus: 
+   - name_html: Emily Karn
+     description_html: Meet Emily Karn, a Columbus, OH dynamo who waltzed into the world of dance with a splash! From ballet to hip-hop, she's conquered it all. After dazzling with NJB Ballet Company, she twirled into the nightlife scene as a backup dancer. For nearly a decade, Emily has been shaking up the Columbus drag scene as a dancer, choreographer, and showstopper extraordinaire. She's graced big stages like RuPaul’s Drag Race Season 11 LA Show and even grooved at Mayor Ginther’s Inaugural Ball. Whether she's choreographing a music video or inspiring dancers, Emily's passion for dance is as infectious as her moves!
+     image-1: 
+       background_image: /uploads/images/krooked-collective-1.jpeg
+       image_focus: 
+     image-2: 
+       background_image: /uploads/images/krooked-collective-5.jpeg
+       image_focus: 
+   - name_html: 
+       description_html: 
+       image-1: 
+         background_image: 
+         image_focus: 
+       image-2: 
+         background_image: 
+         image_focus: 
+   - name_html: 
+       description_html: 
+       image-1: 
+         background_image: 
+         image_focus: 
+       image-2: 
+         background_image: 
+         image_focus: 
 seo:
   title: Krooked Collective
   description: A community of performing artists evolving entertainment through collaborative, evocative and experiential content
@@ -39,4 +74,21 @@ seo:
 <section>
     <h2>{{page.about.heading}}</h2>
     <p>{{page.about.description_html}}</p>
+</section>
+
+<!-- Founders Section -->
+<section>
+    <h2>{{page.founders.heading}}</h2>
+    {% for item in page.founders.founders %}
+    <div class="grid grid-cols-3">
+        <div class="grid grid-cols-2">
+            <div class="bg-image-style aspect-portrait" style="background-image: url('{{item.image-1.background_image}}');"></div>
+            <div class="bg-image-style aspect-portrait" style="background-image: url('{{item.image-2.background_image}}');"></div>
+        </div>
+        <div class="col-span-2">
+            <h3>{{item.name_html}}</h3>
+            <p>{{item.description_html}}</p>
+        </div>
+    </div>
+    {% endfor %}
 </section>
