@@ -325,6 +325,12 @@ video {
 [hidden] {
   display: none;
 }
+body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 31 31 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
 }
