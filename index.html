@@ -103,23 +103,15 @@ seo:
         <p>{{page.upcoming-events.description_html}}</p>
     </div>
 
-    <div class="grid grid-cols-3 gap-4">
-
+    <div class="grid grid-cols-3">
         {% for item in site.events limit:3 %}    
-
         <div>
-            <div class="bg-image-style landscape" style="background-image:url( '{{ item.featured_image }}' );"></div>
-            <div> 
-                {% for item in post.categories %}
-                <span class="tag"> {{item}} </span>
-                {% endfor %}
-
-                <h3 class="margin-t-1"> {{ post.title }} </h3>
-                <p> {{ post.description }} </p>
-                <a href="{{ post.url }}" class="subtle-button">Learn More</a>
-            </div>
+            <div class="bg-image-style aspect-landscape" style="background-image:url('{{item.featured_image}}');"></div>
+            <span class="tag"> {{item.categories | join: ', ' }} </span>
+            <h3 class="margin-t-1"> {{item.title}} </h3>
+            <p> {{item.description}} </p>
+            <a href="{{item.url}}" class="button">Learn More</a>
         </div>
-
         {% endfor %}
     </div>
 </section>
