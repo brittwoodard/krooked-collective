@@ -1,0 +1,4 @@
+collections:
+  events:
+    future: true
+    output: true
