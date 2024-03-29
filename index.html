@@ -53,65 +53,16 @@ seo:
 ---
 
 <!-- Header -->
-<section class="flex min-h-[100vh] items-center justify-center flex-col">
-    <div class="flex justify-between w-full px-4 absolute top-0">
-        <a href="#">LOGO</a>
-        <nav>
-            <a href="#">Events</a>
-        </nav>
-    </div>
-    <div class="flex flex-col items-center justify-center">
-        <video autoplay muted loop playsinline poster class="bg-video">
-            <source src="/uploads/video/krooked-collective-1.webm" type="video/webm">
-            <source src="/uploads/video/krooked-collective-1.mp4" type="video/mp4">
-            <p>Sorry, your browser doesn't support embedded videos.</p> 
-        </video>
-        <div class="text-center">
-            <h1>{{page.header.title}}</h1>
-            <h2>{{page.header.subtitle}}</h2>
-        </div>
-    </div>
-</section>
+{% include hero-banner.html %}
 
 <!-- About Section -->
-<section>
-    <h2>{{page.about.heading}}</h2>
-    <p>{{page.about.description_html}}</p>
-</section>
+{% include about.html %}
 
 <!-- Founders Section -->
-<section>
-    <h2>{{page.founders.heading}}</h2>
-    {% for item in page.founders.founders %}
-    <div class="grid grid-cols-3">
-        <div class="grid grid-cols-2">
-            <div class="bg-image-style aspect-portrait" style="background-image: url('{{item.image-1.background_image}}'); background-position: {{item.image-1.image_focus}};"></div>
-            <div class="bg-image-style aspect-portrait" style="background-image: url('{{item.image-2.background_image}}'); background-position: {{item.image-2.image_focus}};"></div>
-        </div>
-        <div class="col-span-2">
-            <h3>{{item.name_html}}</h3>
-            <p>{{item.description_html}}</p>
-        </div>
-    </div>
-    {% endfor %}
-</section>
+{% include founders.html %}
 
 <!-- Upcoming Events -->
-<section id="featured-events">
-    <div>
-        <h2>{{page.upcoming-events.heading}}</h2>
-        <p>{{page.upcoming-events.description_html}}</p>
-    </div>
+{% include upcoming-events.html %}
 
-    <div class="grid grid-cols-3">
-        {% for item in site.events limit:3 %}    
-        <div>
-            <div class="bg-image-style aspect-landscape" style="background-image:url('{{item.featured_image}}');"></div>
-            <span class="tag"> {{item.categories | join: ', ' }} </span>
-            <h3 class="margin-t-1"> {{item.title}} </h3>
-            <p> {{item.description}} </p>
-            <a href="{{item.url}}" class="button">Learn More</a>
-        </div>
-        {% endfor %}
-    </div>
-</section>
+<!-- Subscribe -->
+{% include section-subscribe.html %}

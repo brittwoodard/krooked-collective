@@ -1,0 +1,26 @@
+<section class="video-text-container relative min-h-[50vh] flex items-center justify-center">
+    <!-- Header Navigation -->
+    <div class="header-nav w-full px-4 absolute top-0 z-20">
+        <div class="flex justify-between">
+            <a href="#">LOGO</a>
+            <nav>
+                <a href="#">Events</a>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- Background Video Container -->
+    <div class="bg-video-container absolute top-0 left-0 right-0 bottom-0">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="/uploads/video/krooked-collective-1.webm" type="video/webm">
+            <source src="/uploads/video/krooked-collective-1.mp4" type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+    </div>
+    
+    <!-- Text Overlay -->
+    <div class="text-overlay z-10">
+        <h1>{{page.header.title}}</h1>
+        <h2>{{page.header.subtitle}}</h2>
+    </div>
+</section>

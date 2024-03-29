@@ -2,3 +2,4 @@ collections:
   events:
     future: true
     output: true
+    permalink: /events/:name/:year/:month/:day/

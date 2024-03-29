@@ -1,0 +1,19 @@
+<section>
+    <h2>{{page.founders.heading}}</h2>
+    {% for item in page.founders.founders %}
+    <div class="grid grid-cols-3">
+        <div class="grid grid-cols-2">
+            <div class="bg-image-style aspect-portrait"
+                style="background-image: url('{{item.image-1.background_image}}'); background-position: {{item.image-1.image_focus}};">
+            </div>
+            <div class="bg-image-style aspect-portrait"
+                style="background-image: url('{{item.image-2.background_image}}'); background-position: {{item.image-2.image_focus}};">
+            </div>
+        </div>
+        <div class="col-span-2">
+            <h3>{{item.name_html}}</h3>
+            <p>{{item.description_html}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</section>

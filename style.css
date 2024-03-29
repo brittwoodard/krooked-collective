@@ -44,17 +44,34 @@
     }
 
     /* Images & Video */
-    .bg-video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .video-text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    .bg-video-container {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: -1;
+        width: 100%;
+        height: 100%;
     }
+    
+    .bg-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .text-overlay {
+        position: relative;
+        text-align: center;
+        z-index: 10;
+    }    
 
     .bg-image-style {
         @apply bg-[grey] bg-no-repeat bg-cover

@@ -464,17 +464,31 @@ p:last-child {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 /* Images & Video */
-.bg-video {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
+.video-text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+.bg-video-container {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+.bg-video {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+.text-overlay {
+        position: relative;
+        text-align: center;
+        z-index: 10;
     }
 .bg-image-style {
   --tw-bg-opacity: 1;
@@ -485,14 +499,35 @@ p:last-child {
 .absolute {
   position: absolute;
 }
+.relative {
+  position: relative;
+}
+.bottom-0 {
+  bottom: 0px;
+}
+.left-0 {
+  left: 0px;
+}
+.right-0 {
+  right: 0px;
+}
 .top-0 {
   top: 0px;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-20 {
+  z-index: 20;
+}
+.col-span-1 {
+  grid-column: span 1 / span 1;
 }
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
-.col-span-7 {
-  grid-column: span 7 / span 7;
+.col-span-3 {
+  grid-column: span 3 / span 3;
 }
 .mb-12 {
   margin-bottom: 3rem;
@@ -503,12 +538,6 @@ p:last-child {
 .mt-4 {
   margin-top: 1rem;
 }
-.mt-8 {
-  margin-top: 2rem;
-}
-.block {
-  display: block;
-}
 .flex {
   display: flex;
 }
@@ -518,17 +547,20 @@ p:last-child {
 .hidden {
   display: none;
 }
-.aspect-portrait {
-  aspect-ratio: 3 / 4;
-}
 .aspect-landscape {
   aspect-ratio: 2 / 1 ;
 }
-.min-h-\[100vh\] {
-  min-height: 100vh;
+.aspect-portrait {
+  aspect-ratio: 3 / 4;
+}
+.min-h-\[50vh\] {
+  min-height: 50vh;
 }
 .w-full {
   width: 100%;
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -536,8 +568,8 @@ p:last-child {
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
-.grid-cols-12 {
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -554,11 +586,11 @@ p:last-child {
 .justify-between {
   justify-content: space-between;
 }
-.gap-4 {
-  gap: 1rem;
-}
 .gap-8 {
   gap: 2rem;
+}
+.rounded-none {
+  border-radius: 0px;
 }
 .border {
   border-width: 1px;
@@ -567,31 +599,23 @@ p:last-child {
   --tw-border-opacity: 1;
   border-color: rgb(10 214 20 / var(--tw-border-opacity));
 }
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.bg-transparent {
+  background-color: transparent;
+}
 .p-2 {
   padding: 0.5rem;
 }
-.p-4 {
-  padding: 1rem;
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-.px-5p {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-.pb-\[2\.5\%\] {
-  padding-bottom: 2.5%;
-}
-.pt-5p {
-  padding-top: 5%;
-}
-.text-center {
-  text-align: center;
-}
-.text-\[0\.9rem\] {
-  font-size: 0.9rem;
 }
 
 
@@ -601,28 +625,16 @@ p:last-child {
 /* ----------- ADDITIONAL COMPONENTS  --------- */
 
 @media (min-width: 640px) {
-  .sm\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-  .sm\:col-span-3 {
-    grid-column: span 3 / span 3;
-  }
   .sm\:mb-0 {
     margin-bottom: 0px;
-  }
-  .sm\:mt-0 {
-    margin-top: 0px;
   }
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .sm\:grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 768px) {
-  .md\:text-right {
-    text-align: right;
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
   }
 }

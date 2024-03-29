@@ -2,21 +2,19 @@
 layout: default
 ---
 
-
 <section>
-    <div class="bg-image-style aspect-landscape grid grid-cols-12"></div>
-    <div class="col-span-7">
-        <h1>{{page.title}}</h1>
-        {% for item in page.categories %}
-        <span class="tag"> {{item}}</span>
-        {% endfor %}
-        <p>{{ page.date | date_to_long_string }}</p>
-        <a>Reserve Your Spot</a>
+    <div class="grid grid-cols-3">
+        <div class="bg-image-style aspect-landscape" style="background-image: url('{{page.featured_image}}');"></div>
+        <div class="col-span-2">
+            <h1>{{page.event-name}}</h1>
+            <p>{{page.event-date | date_to_long_string}}</p>
+            <p>{{page.event-time}}</p>
+            <a href="{{page.ticket-url}}">Reserve Your Spot</a>
+        </div>
     </div>
     <div>
-
-        {{content}}
-
+        <p>{{page.location}}</p>
+        <p>{{page.description_html}}</p>
+        <span>{{page.categories}}</span>
     </div>
-
 </section>
