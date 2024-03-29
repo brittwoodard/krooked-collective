@@ -5,10 +5,10 @@
     <div class="mb-8">
         <div class="grid grid-cols-2 mb-4">
             <div class="bg-image-style border border-light aspect-portrait-tall"
-                style="background-image: url('{{ item.image-1.background_image }}'); background-position: {{ item.image-1.image_focus }};">
+                style="background-image: url('{{ item.image-1.background_image }}'); background-position: {{ item.image-1.image_focus | default: 'center' }};">
             </div>
             <div class="bg-image-style border border-light"
-                style="background-image: url('{{ item.image-2.background_image }}'); background-position: {{ item.image-2.image_focus }};">
+                style="background-image: url('{{ item.image-2.background_image }}'); background-position: {{ item.image-2.image_focus | default: 'center' }};">
             </div>
         </div>
         <div>
