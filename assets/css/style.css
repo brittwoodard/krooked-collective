@@ -32,7 +32,7 @@ html,
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: Montserrat, sans-serif; /* 4 */
+  font-family: Hanno, sans-serif; /* 4 */
   font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
   -webkit-tap-highlight-color: transparent; /* 7 */
@@ -328,6 +328,7 @@ video {
 body {
   --tw-bg-opacity: 1;
   background-color: rgb(31 31 31 / var(--tw-bg-opacity));
+  font-family: Hanno, sans-serif;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -336,7 +337,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 p {
   margin-bottom: 0.5em;
+  font-size: 1.1rem;
   line-height: 1.5;
+  letter-spacing: 0.05em;
 }
 p:last-child {
   margin-bottom: 0px;
@@ -438,6 +441,12 @@ p:last-child {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+/* Typography */
+.serif-lg {
+  font-family: Fluta, serif;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
 }
 /* Structure */
 .tag {
@@ -571,9 +580,6 @@ p:last-child {
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
-.flex-col {
-  flex-direction: column;
-}
 .items-center {
   align-items: center;
 }
@@ -606,16 +612,39 @@ p:last-child {
 .bg-transparent {
   background-color: transparent;
 }
+.p-10p {
+  padding: 10%;
+}
 .p-2 {
   padding: 0.5rem;
+}
+.px-10p {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@font-face {
+    font-family: 'Hanno';
+    src: url('/fonts/Hanno-Regular.woff2') format('woff2'),
+         url('/fonts/Hanno-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fluta';
+    src: url('/fonts/fluta-medium.woff2') format('woff2'),
+         url('/fonts/fluta-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 

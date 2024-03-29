@@ -3,12 +3,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Hanno';
+    src: url('/fonts/Hanno-Regular.woff2') format('woff2'),
+         url('/fonts/Hanno-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fluta';
+    src: url('/fonts/fluta-medium.woff2') format('woff2'),
+         url('/fonts/fluta-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /* ----------- Default Styles to apply to the whole project  --------- */
 
 @layer base {
     body {
-        @apply bg-black text-white
+        @apply bg-black text-white font-sans
     }
 
     h1, h2, h3, h4, h5, h6  {
@@ -16,7 +32,7 @@
     }
 
     p {
-        @apply mb-[0.5em] leading-normal;
+        @apply mb-[0.5em] leading-normal tracking-wider text-[1.1rem]
     }
 
     p:last-child {
@@ -29,6 +45,10 @@
 /* ----------- ADDITIONAL COMPONENTS  --------- */
 
 @layer components {
+    /* Typography */
+    .serif-lg {
+        @apply font-serif text-[3rem] tracking-widest
+    }
 
     /* Structure */
     .middle-center {
