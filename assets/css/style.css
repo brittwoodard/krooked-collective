@@ -442,6 +442,34 @@ p:last-child {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
 /* Typography */
 .serif-lg {
   font-family: Fluta, serif;
@@ -643,6 +671,16 @@ input::placeholder,
 .w-full {
   width: 100%;
 }
+.min-w-max {
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.max-w-full {
+  max-width: 100%;
+}
+.shrink-0 {
+  flex-shrink: 0;
+}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -651,6 +689,12 @@ input::placeholder,
 }
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
 }
 .items-center {
   align-items: center;
@@ -669,6 +713,9 @@ input::placeholder,
 }
 .gap-8 {
   gap: 2rem;
+}
+.overflow-x-auto {
+  overflow-x: auto;
 }
 .rounded-none {
   border-radius: 0px;
@@ -707,6 +754,9 @@ input::placeholder,
 }
 .p-2 {
   padding: 0.5rem;
+}
+.p-10 {
+  padding: 2.5rem;
 }
 .px-10p {
   padding-left: 10%;
@@ -819,10 +869,22 @@ input::placeholder,
   .lg\:block {
     display: block;
   }
+  .lg\:grid {
+    display: grid;
+  }
   .lg\:hidden {
     display: none;
   }
   .lg\:min-h-\[60vh\] {
     min-height: 60vh;
+  }
+  .lg\:w-auto {
+    width: auto;
+  }
+  .lg\:shrink {
+    flex-shrink: 1;
+  }
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
