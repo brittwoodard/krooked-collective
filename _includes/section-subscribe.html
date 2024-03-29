@@ -1,11 +1,11 @@
 <section class="p-10p">
-    <div class="w-[60%] mb-8">
+    <div class="md:w-[60%] mb-8">
         {% for item in site.data.subscribe-settings.form %}
         <h2 class="serif-lg text-light">{{ item.heading }}</h2>
         <p>{{ item.description_html }}</p>
         {% endfor %}
     </div>
-    <div class="mr-[40%]">
+    <div class="md:mr-[40%]">
         {% include form-subscribe.html %}
     </div>
 </section>
