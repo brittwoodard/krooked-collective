@@ -50,6 +50,10 @@
         @apply font-serif text-[3rem] tracking-widest
     }
 
+    .serif-md {
+        @apply font-serif text-[2rem] tracking-widest
+    }
+
     .sans-md {
         @apply text-[1.6rem]
     }
@@ -64,7 +68,7 @@
     }
 
     .button  {
-        @apply inline-block border border-white py-2 px-4 hover:text-medium hover:border-medium duration-500
+        @apply inline-block border border-white py-2 px-4 hover:text-medium hover:border-medium duration-500 font-serif
     }
 
     /* Images & Video */

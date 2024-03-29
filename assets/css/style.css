@@ -448,6 +448,11 @@ p:last-child {
   font-size: 3rem;
   letter-spacing: 0.1em;
 }
+.serif-md {
+  font-family: Fluta, serif;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+}
 .sans-md {
   font-size: 1.6rem;
 }
@@ -471,6 +476,7 @@ p:last-child {
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  font-family: Fluta, serif;
   transition-duration: 500ms;
 }
 .button:hover {
@@ -536,6 +542,12 @@ p:last-child {
 .z-20 {
   z-index: 20;
 }
+.order-first {
+  order: -9999;
+}
+.order-last {
+  order: 9999;
+}
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -545,14 +557,36 @@ p:last-child {
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
+.my-32 {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
 .mb-12 {
   margin-bottom: 3rem;
 }
 .mb-4 {
   margin-bottom: 1rem;
 }
+.ml-8 {
+  margin-left: 2rem;
+}
+.mr-8 {
+  margin-right: 2rem;
+}
 .mt-4 {
   margin-top: 1rem;
+}
+.mb-0 {
+  margin-bottom: 0px;
+}
+.mt-32 {
+  margin-top: 8rem;
+}
+.mb-32 {
+  margin-bottom: 8rem;
+}
+.mt-0 {
+  margin-top: 0px;
 }
 .flex {
   display: flex;
@@ -565,9 +599,6 @@ p:last-child {
 }
 .aspect-landscape {
   aspect-ratio: 2 / 1 ;
-}
-.aspect-portrait {
-  aspect-ratio: 3 / 4;
 }
 .min-h-\[60vh\] {
   min-height: 60vh;
@@ -608,9 +639,20 @@ p:last-child {
 .border {
   border-width: 1px;
 }
+.border-y {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+.border-t {
+  border-top-width: 1px;
+}
 .border-light {
   --tw-border-opacity: 1;
   border-color: rgb(10 214 20 / var(--tw-border-opacity));
+}
+.border-medium {
+  --tw-border-opacity: 1;
+  border-color: rgb(221 0 255 / var(--tw-border-opacity));
 }
 .border-white {
   --tw-border-opacity: 1;
@@ -625,6 +667,9 @@ p:last-child {
 .p-2 {
   padding: 0.5rem;
 }
+.p-10 {
+  padding: 2.5rem;
+}
 .px-10p {
   padding-left: 10%;
   padding-right: 10%;
@@ -637,8 +682,33 @@ p:last-child {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
 .font-serif {
   font-family: Fluta, serif;
+}
+.font-light {
+  font-weight: 300;
+}
+.text-light {
+  --tw-text-opacity: 1;
+  color: rgb(10 214 20 / var(--tw-text-opacity));
+}
+.text-medium {
+  --tw-text-opacity: 1;
+  color: rgb(221 0 255 / var(--tw-text-opacity));
+}
+.text-light-alt {
+  --tw-text-opacity: 1;
+  color: rgb(17 240 26 / var(--tw-text-opacity));
+}
+.text-medium-alt {
+  --tw-text-opacity: 1;
+  color: rgb(237 0 250 / var(--tw-text-opacity));
 }
 
 @font-face {
