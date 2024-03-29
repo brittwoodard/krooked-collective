@@ -2,7 +2,7 @@
 layout: event
 featured_image: /uploads/images/krooked-collective-6.jpeg
 event-name: "Brunchables"
-event-date: 2024-04-29
+event-date: 2024-05-29
 event-time: "9:00 PM"
 ticket-url: https://example.com/reserve-spot
 location: "Venue Name"
