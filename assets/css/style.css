@@ -634,6 +634,9 @@ input::placeholder,
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+.content-center {
+  align-content: center;
+}
 .items-center {
   align-items: center;
 }
@@ -709,6 +712,14 @@ input::placeholder,
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.px-5p {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .text-left {
   text-align: left;
