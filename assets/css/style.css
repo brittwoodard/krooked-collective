@@ -448,6 +448,9 @@ p:last-child {
   font-size: 3rem;
   letter-spacing: 0.1em;
 }
+.sans-md {
+  font-size: 1.6rem;
+}
 /* Structure */
 .tag {
   display: inline-block;
@@ -461,16 +464,20 @@ p:last-child {
 }
 .button {
   display: inline-block;
-  --tw-bg-opacity: 1;
-  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
-  padding-left: 1rem;
-  padding-right: 1rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition-duration: 500ms;
+}
+.button:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(221 0 255 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(221 0 255 / var(--tw-text-opacity));
 }
 /* Images & Video */
 .video-text-container {
@@ -562,8 +569,8 @@ p:last-child {
 .aspect-portrait {
   aspect-ratio: 3 / 4;
 }
-.min-h-\[50vh\] {
-  min-height: 50vh;
+.min-h-\[60vh\] {
+  min-height: 60vh;
 }
 .w-full {
   width: 100%;
@@ -629,6 +636,9 @@ p:last-child {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.font-serif {
+  font-family: Fluta, serif;
 }
 
 @font-face {
