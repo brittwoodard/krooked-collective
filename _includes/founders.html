@@ -1,4 +1,27 @@
-<section class="p-10p border-y border-medium">
+<!-- Mobile Devices -->
+<section class="p-10p border-y border-medium lg:hidden">
+    <h2 class="serif-lg text-light">{{ page.founders.heading }}</h2>
+    {% for item in page.founders.founders %}
+    <div class="mb-8">
+        <div class="grid grid-cols-2 mb-4">
+            <div class="bg-image-style border border-light aspect-portrait-tall"
+                style="background-image: url('{{ item.image-1.background_image }}'); background-position: {{ item.image-1.image_focus }};">
+            </div>
+            <div class="bg-image-style border border-light"
+                style="background-image: url('{{ item.image-2.background_image }}'); background-position: {{ item.image-2.image_focus }};">
+            </div>
+        </div>
+        <div>
+            <h3 class="serif-md text-medium">{{ item.name_html }}</h3>
+            <p>{{ item.description_html }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+
+<!-- Desktop -->
+<section class="p-10p border-y border-medium hidden lg:block">
     <h2 class="serif-lg text-light">{{ page.founders.heading }}</h2>
     {% for item in page.founders.founders %}
     <div class="grid grid-cols-3 
@@ -18,3 +41,5 @@
     </div>
     {% endfor %}
 </section>
+
+

@@ -48,15 +48,15 @@
 
     /* Typography */
     .serif-lg {
-        @apply font-serif text-[3rem] tracking-widest
+        @apply font-serif text-[2rem] md:text-[3rem] tracking-widest
     }
 
     .serif-md {
-        @apply font-serif text-[2rem] tracking-widest
+        @apply font-serif text-[1.5rem] md:text-[2rem] tracking-widest
     }
 
     .sans-md {
-        @apply text-[1.6rem]
+        @apply text-[1.1rem] md:text-[1.6rem]
     }
 
     /* Structure */
