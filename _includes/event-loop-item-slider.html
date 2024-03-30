@@ -1,7 +1,7 @@
-<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="flex flex-nowrap overflow-x-auto lg:gap-8">
     {% for item in site.events limit:{{page.upcoming-events.limit}} %}
-    <div class="mt-12">
-        <div class="bg-image-style aspect-landscape border border-light mb-4" style="background-image:url('{{item.featured_image}}');"></div>
+    <div class="shrink-0 lg:shrink lg:w-auto max-w-[75%] mx-4 lg:mx-0">
+        <div class="bg-image-style min-h-[25vh] border border-light mb-4" style="background-image:url('{{item.featured_image}}');"></div>
         <span class="uppercase"> {{item.categories | join: ' ' }} </span>
         <h3 class="margin-t-1 font-serif mt-4"> {{item['event-name']}} </h3>
         <p class="line-clamp-2"> {{item.description_html | strip_html | truncatewords: 50 }} </p>

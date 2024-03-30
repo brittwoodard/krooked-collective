@@ -617,6 +617,9 @@ input::placeholder,
 .mt-8 {
   margin-top: 2rem;
 }
+.mt-12 {
+  margin-top: 3rem;
+}
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -635,26 +638,20 @@ input::placeholder,
 .hidden {
   display: none;
 }
-.aspect-landscape {
-  aspect-ratio: 2 / 1 ;
-}
 .aspect-portrait-tall {
   aspect-ratio: 3 / 5;
+}
+.aspect-landscape {
+  aspect-ratio: 2 / 1 ;
 }
 .min-h-\[25vh\] {
   min-height: 25vh;
 }
-.min-h-\[90vh\] {
-  min-height: 90vh;
-}
-.min-h-\[50vh\] {
-  min-height: 50vh;
-}
-.min-h-\[40vh\] {
-  min-height: 40vh;
-}
 .min-h-\[30vh\] {
   min-height: 30vh;
+}
+.min-h-\[90vh\] {
+  min-height: 90vh;
 }
 .w-32 {
   width: 8rem;
@@ -676,6 +673,9 @@ input::placeholder,
 }
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .flex-nowrap {
   flex-wrap: nowrap;
@@ -774,6 +774,10 @@ input::placeholder,
 .uppercase {
   text-transform: uppercase;
 }
+.text-dark {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
+}
 .text-light {
   --tw-text-opacity: 1;
   color: rgb(10 214 20 / var(--tw-text-opacity));
@@ -789,13 +793,6 @@ input::placeholder,
 .text-medium-alt {
   --tw-text-opacity: 1;
   color: rgb(237 0 250 / var(--tw-text-opacity));
-}
-.text-dark {
-  --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
-}
-.underline {
-  text-decoration-line: underline;
 }
 
 @font-face {
@@ -861,11 +858,11 @@ input::placeholder,
   .md\:mb-0 {
     margin-bottom: 0px;
   }
-  .md\:mr-\[40\%\] {
-    margin-right: 40%;
-  }
   .md\:ml-8 {
     margin-left: 2rem;
+  }
+  .md\:mr-\[40\%\] {
+    margin-right: 40%;
   }
   .md\:min-h-0 {
     min-height: 0px;
@@ -875,6 +872,9 @@ input::placeholder,
   }
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -897,6 +897,9 @@ input::placeholder,
   }
   .lg\:shrink {
     flex-shrink: 1;
+  }
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .lg\:gap-8 {
     gap: 2rem;
