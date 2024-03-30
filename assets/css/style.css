@@ -759,6 +759,9 @@ input::placeholder,
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.pt-8 {
+  padding-top: 2rem;
+}
 .text-left {
   text-align: left;
 }
