@@ -32,7 +32,7 @@
     }
 
     p {
-        @apply mb-[0.5em] leading-normal tracking-wider text-[1.1rem]
+        @apply mb-[0.5em] leading-normal tracking-wider text-[1rem]
     }
 
     p:last-child {
