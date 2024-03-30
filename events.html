@@ -1,3 +1,29 @@
 ---
 layout: default
+upcoming-events: 
+  heading: Upcoming Events
+  description_html: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
 ---
+
+<!-- Upcoming Events -->
+<section class="p-10p">
+    <div class="mb-8">
+        <h2 class="serif-lg text-light">{{page.upcoming-events.heading}}</h2>
+        <p>{{page.upcoming-events.description_html}}</p>
+    </div>
+        {% include event-loop-item.html %}
+    </div>
+</section>
+
+<!-- Create Event -->
+<section class="grid padded-lg bg-v-light padded-b-0 xs-padded-b-10 flex-flip" id="create-event">
+    <div class="col-7_xs-12-middle editable">
+        <h3 class="heading-alt xs-heading-alt">Contribute to the<br>collective consciousness</h3>
+        <h2 class="subtitle-alt xs-subtitle-alt text-medium">List your event for free</h2>
+        <a href="#" class="button">Create Event</a>
+    </div>
+    <div class="col-5_xs-12 bg-image bg-border shape-window tall-60 sm-tall-30 xs-padded-10 xs-margin-b-2" style="background-image: url('/images/my-conscious-community-2.jpg');"></div>
+    <div data-aos="fade-down" data-aos-easing="linear" class="margin-b--6">
+        <img src="/images/mcc-logo-transparent.png" class="sit-eye sm-sit-eye hide-xs">
+    </div>
+</section>

@@ -794,6 +794,9 @@ input::placeholder,
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity));
 }
+.underline {
+  text-decoration-line: underline;
+}
 
 @font-face {
     font-family: 'Hanno';
