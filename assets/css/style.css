@@ -623,6 +623,9 @@ input::placeholder,
 .mt-12 {
   margin-top: 3rem;
 }
+.mt-16 {
+  margin-top: 4rem;
+}
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -720,6 +723,9 @@ input::placeholder,
 .border-t {
   border-top-width: 1px;
 }
+.border-b {
+  border-bottom-width: 1px;
+}
 .border-light {
   --tw-border-opacity: 1;
   border-color: rgb(10 214 20 / var(--tw-border-opacity));
@@ -731,6 +737,10 @@ input::placeholder,
 .border-medium-alt {
   --tw-border-opacity: 1;
   border-color: rgb(237 0 250 / var(--tw-border-opacity));
+}
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 .bg-medium {
   --tw-bg-opacity: 1;
@@ -771,6 +781,9 @@ input::placeholder,
 .text-left {
   text-align: left;
 }
+.text-center {
+  text-align: center;
+}
 .text-right {
   text-align: right;
 }
@@ -799,6 +812,9 @@ input::placeholder,
 .text-medium-alt {
   --tw-text-opacity: 1;
   color: rgb(237 0 250 / var(--tw-text-opacity));
+}
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 @font-face {
