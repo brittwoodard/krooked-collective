@@ -614,6 +614,9 @@ input::placeholder,
 .mt-4 {
   margin-top: 1rem;
 }
+.mt-8 {
+  margin-top: 2rem;
+}
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -643,6 +646,15 @@ input::placeholder,
 }
 .min-h-\[90vh\] {
   min-height: 90vh;
+}
+.min-h-\[50vh\] {
+  min-height: 50vh;
+}
+.min-h-\[40vh\] {
+  min-height: 40vh;
+}
+.min-h-\[30vh\] {
+  min-height: 30vh;
 }
 .w-32 {
   width: 8rem;
@@ -775,6 +787,10 @@ input::placeholder,
   --tw-text-opacity: 1;
   color: rgb(237 0 250 / var(--tw-text-opacity));
 }
+.text-dark {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
+}
 
 @font-face {
     font-family: 'Hanno';
@@ -833,14 +849,26 @@ input::placeholder,
 }
 
 @media (min-width: 768px) {
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
   .md\:mb-0 {
     margin-bottom: 0px;
   }
   .md\:mr-\[40\%\] {
     margin-right: 40%;
   }
+  .md\:ml-8 {
+    margin-left: 2rem;
+  }
+  .md\:min-h-0 {
+    min-height: 0px;
+  }
   .md\:w-\[60\%\] {
     width: 60%;
+  }
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

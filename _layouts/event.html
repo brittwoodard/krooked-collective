@@ -2,19 +2,19 @@
 layout: default
 ---
 
-<section>
-    <div class="grid grid-cols-3">
-        <div class="bg-image-style aspect-landscape" style="background-image: url('{{page.featured_image}}');"></div>
-        <div class="col-span-2">
-            <h1>{{page.event-name}}</h1>
+<section class="p-10p">
+    <div class="grid md:grid-cols-3">
+        <div class="bg-image-style min-h-[30vh] md:min-h-0 border mb-8 md:mb-0 border-light" style="background-image: url('{{page.featured_image}}');"></div>
+        <div class="md:col-span-2 md:ml-8">
+            <h1 class="serif-md text-light">{{page.event-name}}</h1>
             <p>{{page.event-date | date_to_long_string}}</p>
             <p>{{page.event-time}}</p>
-            <a href="{{page.ticket-url}}">Reserve Your Spot</a>
+            <a href="{{page.ticket-url}}" class="button">Reserve Your Spot</a>
         </div>
     </div>
-    <div>
-        <p>{{page.location}}</p>
+    <div class="mt-8">
+        <p class="font-serif">{{page.location}}</p>
         <p>{{page.description_html}}</p>
-        <span>{{page.categories}}</span>
+        <span class="uppercase text-dark">{{page.categories}}</span>
     </div>
 </section>
