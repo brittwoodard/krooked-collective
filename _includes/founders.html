@@ -24,7 +24,7 @@
 <section class="p-10p border-y border-medium hidden lg:block">
     <h2 class="serif-lg text-light">{{ page.founders.heading }}</h2>
     {% for item in page.founders.founders %}
-    <div class="grid grid-cols-3 
+    <div class="grid grid-cols-3 gap-16
         {% if forloop.first %}mt-0 mb-32{% elsif forloop.last %}mt-32 mb-0{% else %}my-32{% endif %}">
         <div class="grid grid-cols-2 {% cycle 'order-first', 'order-last' %}">
             <div class="bg-image-style border border-light"
@@ -34,7 +34,7 @@
                 style="background-image: url('{{ item.image-2.background_image }}'); background-position: {{ item.image-2.image_focus }};">
             </div>
         </div>
-        <div id="content" class="col-span-2 {% cycle 'text-left', 'text-right' %} {% cycle 'ml-8', 'mr-8' %}">
+        <div id="content" class="col-span-2 {% cycle 'text-left', 'text-right' %}">
             <h3 class="serif-md text-medium">{{ item.name_html }}</h3>
             <p>{{ item.description_html }}</p>
         </div>

@@ -448,28 +448,14 @@ p:last-child {
   font-size: 2rem;
   letter-spacing: 0.1em;
 }
-@media (min-width: 768px) {
-  .serif-lg {
-    font-size: 3rem;
-  }
-}
 .serif-md {
   font-family: Fluta, serif;
   font-size: 1.5rem;
   letter-spacing: 0.1em;
 }
-@media (min-width: 768px) {
-  .serif-md {
-    font-size: 2rem;
-  }
-}
 .sans-md {
   font-size: 1.1rem;
-}
-@media (min-width: 768px) {
-  .sans-md {
-    font-size: 1.6rem;
-  }
+  letter-spacing: 0.1em;
 }
 /* Structure */
 .button {
@@ -512,11 +498,6 @@ p:last-child {
         -o-object-fit: cover;
            object-fit: cover;
     }
-.text-overlay {
-        position: relative;
-        text-align: center;
-        z-index: 10;
-    }
 .bg-image-style {
   --tw-bg-opacity: 1;
   background-color: rgb(128 128 128 / var(--tw-bg-opacity));
@@ -554,9 +535,6 @@ input::placeholder,
 }
 .top-0 {
   top: 0px;
-}
-.z-10 {
-  z-index: 10;
 }
 .z-20 {
   z-index: 20;
@@ -623,6 +601,12 @@ input::placeholder,
 .mt-8 {
   margin-top: 2rem;
 }
+.ml-16 {
+  margin-left: 4rem;
+}
+.mr-16 {
+  margin-right: 4rem;
+}
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -658,6 +642,9 @@ input::placeholder,
 }
 .w-32 {
   width: 8rem;
+}
+.w-\[80\%\] {
+  width: 80%;
 }
 .w-full {
   width: 100%;
@@ -697,6 +684,9 @@ input::placeholder,
 }
 .gap-8 {
   gap: 2rem;
+}
+.gap-16 {
+  gap: 4rem;
 }
 .overflow-x-auto {
   overflow-x: auto;
