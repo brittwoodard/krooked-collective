@@ -574,14 +574,8 @@ input::placeholder,
 .mb-8 {
   margin-bottom: 2rem;
 }
-.ml-8 {
-  margin-left: 2rem;
-}
 .mr-4 {
   margin-right: 1rem;
-}
-.mr-8 {
-  margin-right: 2rem;
 }
 .mt-0 {
   margin-top: 0px;
@@ -600,12 +594,6 @@ input::placeholder,
 }
 .mt-8 {
   margin-top: 2rem;
-}
-.ml-16 {
-  margin-left: 4rem;
-}
-.mr-16 {
-  margin-right: 4rem;
 }
 .line-clamp-2 {
   overflow: hidden;
@@ -679,14 +667,14 @@ input::placeholder,
 .justify-between {
   justify-content: space-between;
 }
+.gap-16 {
+  gap: 4rem;
+}
 .gap-2 {
   gap: 0.5rem;
 }
 .gap-8 {
   gap: 2rem;
-}
-.gap-16 {
-  gap: 4rem;
 }
 .overflow-x-auto {
   overflow-x: auto;
