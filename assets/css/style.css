@@ -625,8 +625,14 @@ input::placeholder,
 .aspect-portrait-tall {
   aspect-ratio: 3 / 5;
 }
+.aspect-portrait {
+  aspect-ratio: 3 / 4;
+}
 .h-full {
   height: 100%;
+}
+.h-\[30vh\] {
+  height: 30vh;
 }
 .min-h-\[25vh\] {
   min-height: 25vh;
@@ -639,6 +645,12 @@ input::placeholder,
 }
 .min-h-\[90vh\] {
   min-height: 90vh;
+}
+.min-h-\[40vh\] {
+  min-height: 40vh;
+}
+.min-h-\[20vh\] {
+  min-height: 20vh;
 }
 .w-32 {
   width: 8rem;
