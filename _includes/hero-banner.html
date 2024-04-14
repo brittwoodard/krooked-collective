@@ -1,14 +1,13 @@
 <section class="video-text-container relative min-h-[90vh] lg:min-h-[65vh] flex items-center justify-center border-b border-light">
    <!-- Header Nav -->
-    <div class="header-nav w-full px-5p py-8 absolute top-0 z-20">
+    <div class="header-nav w-full px-5p py-8 absolute top-0 z-20 hidden md:block">
         <div class="flex justify-between items-center">
             <a href="/" class="w-32">
                 <img src="{{ site.data.site-settings.logo.image_path }}" alt="Logo" class="w-full">
             </a>
-            <nav class="font-serif">
-                <a href="/about.html" class="button mr-4">About</a>
-                <a href="/events.html" class="button">Events</a>
-            </nav>
+
+            <!-- Desktop Menu -->
+            {% include nav-desktop.html %}
         </div>
     </div>    
     

@@ -1,0 +1,18 @@
+<div class="text-right">
+    <a class="hamburger-button lg:hidden"> &#9776; </a>
+</div>
+
+<div class="mobile-menu">
+    <nav>
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/events.html">Events</a>
+    </nav>
+</div>
+
+<script>
+    $('.hamburger-button').click(function () {
+        $('.mobile-menu').fadeToggle(100);
+        $(this).toggleClass('active');
+    });
+</script>
