@@ -45,20 +45,34 @@ founders:
 ---
 
 <!-- Hero Banner -->
-<section class="grid lg:grid-cols-2 lg:border-t border-medium-alt lg:divide-x divide-medium">
-  <div class="p-10p flex flex-col items-center justify-center">
-      <div>
-        <h2 class="text-2xl font-serif text-light">{{page.about.heading}}</h2>
-        <p class="text-white">{{page.about.description_html}}</p>
-      </div>
-  </div>
+<section class="lg:border-t border-medium">
+  <!-- Header Nav -->
+  <div class="header-nav w-full px-5p py-8 absolute top-0 z-20">
+    <div class="flex justify-between items-center">
+        <a href="/" class="w-32">
+            <img src="{{ site.data.site-settings.logo.image_path }}" alt="Logo" class="w-full">
+        </a>
+        <nav class="font-serif">
+            <a href="/index.html" class="button mr-4">Home</a>
+            <a href="/events.html" class="button">Events</a>
+        </nav>
+    </div>
+  </div> 
+  <div class="grid lg:grid-cols-2 lg:divide-x divide-medium">
+    <div class="p-10p flex flex-col items-center justify-center">
+        <div>
+          <h2 class="text-2xl font-serif text-light">{{page.about.heading}}</h2>
+          <p class="text-white">{{page.about.description_html}}</p>
+        </div>
+    </div>
 
-  <!-- Video -->
-  <div class="relative order-first lg:order-last w-full min-h-[60vh] border-b lg:border-b-0 border-medium-alt">
-    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
-      <source src="{{page.header.video.url}}" type="video/mp4">
-      Sorry, your browser doesn't support embedded videos.
-    </video>
+    <!-- Video -->
+    <div class="relative order-first lg:order-last w-full min-h-[60vh] border-b lg:border-b-0 border-medium-alt">
+      <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="{{page.header.video.url}}" type="video/mp4">
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+    </div>
   </div>
 </section>
 
