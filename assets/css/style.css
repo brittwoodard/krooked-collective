@@ -548,6 +548,9 @@ input::placeholder,
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -595,6 +598,9 @@ input::placeholder,
 .mt-8 {
   margin-top: 2rem;
 }
+.mt-20 {
+  margin-top: 5rem;
+}
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -619,11 +625,17 @@ input::placeholder,
 .aspect-portrait-tall {
   aspect-ratio: 3 / 5;
 }
+.h-full {
+  height: 100%;
+}
 .min-h-\[25vh\] {
   min-height: 25vh;
 }
 .min-h-\[30vh\] {
   min-height: 30vh;
+}
+.min-h-\[60vh\] {
+  min-height: 60vh;
 }
 .min-h-\[90vh\] {
   min-height: 90vh;
@@ -652,6 +664,9 @@ input::placeholder,
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+.flex-col {
+  flex-direction: column;
+}
 .flex-nowrap {
   flex-wrap: nowrap;
 }
@@ -675,6 +690,10 @@ input::placeholder,
 }
 .gap-8 {
   gap: 2rem;
+}
+.divide-medium > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(221 0 255 / var(--tw-divide-opacity));
 }
 .overflow-x-auto {
   overflow-x: auto;
@@ -718,6 +737,10 @@ input::placeholder,
 .bg-transparent {
   background-color: transparent;
 }
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .p-10p {
   padding: 10%;
 }
@@ -759,6 +782,10 @@ input::placeholder,
 .font-serif {
   font-family: Fluta, serif;
 }
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .uppercase {
   text-transform: uppercase;
 }
@@ -781,6 +808,10 @@ input::placeholder,
 .text-medium-alt {
   --tw-text-opacity: 1;
   color: rgb(237 0 250 / var(--tw-text-opacity));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .duration-500 {
   transition-duration: 500ms;
@@ -870,6 +901,9 @@ input::placeholder,
 }
 
 @media (min-width: 1024px) {
+  .lg\:order-last {
+    order: 9999;
+  }
   .lg\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -889,11 +923,25 @@ input::placeholder,
   .lg\:shrink {
     flex-shrink: 1;
   }
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .lg\:gap-8 {
     gap: 2rem;
+  }
+  .lg\:divide-x > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-x-reverse: 0;
+    border-right-width: calc(1px * var(--tw-divide-x-reverse));
+    border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
+  }
+  .lg\:border-b-0 {
+    border-bottom-width: 0px;
+  }
+  .lg\:border-t {
+    border-top-width: 1px;
   }
   .lg\:p-10p {
     padding: 10%;

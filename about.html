@@ -1,5 +1,9 @@
 ---
 layout: default
+header: 
+  video:
+    type: youtube
+    url: /uploads/video/krooked-collective-1.mp4
 about: 
   heading: About Krooked Collective
   description_html: Krooked Collective was established in 2024 by Aaron Kint, Emily Karn, Jessica "Diba" Bennett, and Mary Jo Bono. As a versatile production company, we cater to individuals dissatisfied with their current artistic enviornments, offering an escape for those seeking inspiration and collaboration. Our aim is to unite like-minded artists who aspire to challenge the limits of their creativity. Krooked Collective is a place for rebels, revolutionaries, and disruptors, leveraging technology to create an exensive network of artists.</p><p>We strongly believe in the power of collaboration as a pathway to the future, striving to curate experiences that push both artists and audiences beyond their comfort zones.
@@ -40,8 +44,26 @@ founders:
        image_focus: bottom
 ---
 
+<!-- Hero Banner -->
+<section class="grid lg:grid-cols-2 lg:border-t border-medium-alt lg:divide-x divide-medium">
+  <div class="p-10p flex flex-col items-center justify-center">
+      <div>
+        <h2 class="text-2xl font-serif text-light">{{page.about.heading}}</h2>
+        <p class="text-white">{{page.about.description_html}}</p>
+      </div>
+  </div>
+
+  <!-- Video -->
+  <div class="relative order-first lg:order-last w-full min-h-[60vh] border-b lg:border-b-0 border-medium-alt">
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+      <source src="{{page.header.video.url}}" type="video/mp4">
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+  </div>
+</section>
+
+
 <!-- About -->
-{% include about.html %}
 
 <!-- Founders Section -->
 {% include founders.html %}

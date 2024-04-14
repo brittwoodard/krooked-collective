@@ -3,6 +3,7 @@
     <h2 class="serif-lg text-light">{{ page.founders.heading }}</h2>
     {% for item in page.founders.founders %}
     <div class="mb-8">
+        <h3 class="serif-md text-medium">{{ item.name_html }}</h3>
         <div class="grid grid-cols-2 mb-4">
             <div class="bg-image-style border border-light aspect-portrait-tall"
                 style="background-image: url('{{ item.image-1.background_image }}'); background-position: {{ item.image-1.image_focus | default: 'center' }};">
@@ -12,7 +13,6 @@
             </div>
         </div>
         <div>
-            <h3 class="serif-md text-medium">{{ item.name_html }}</h3>
             <p>{{ item.description_html }}</p>
         </div>
     </div>
@@ -24,22 +24,23 @@
 <section class="p-10p border-y border-medium hidden lg:block">
     <h2 class="serif-lg text-light">{{ page.founders.heading }}</h2>
     {% for item in page.founders.founders %}
-    <div class="grid grid-cols-3 gap-16
-        {% if forloop.first %}mt-0 mb-32{% elsif forloop.last %}mt-32 mb-0{% else %}my-32{% endif %}">
-        <div class="grid grid-cols-2 {% cycle 'order-first', 'order-last' %}">
-            <div class="bg-image-style border border-light"
-                style="background-image: url('{{ item.image-1.background_image }}'); background-position: {{ item.image-1.image_focus }};">
+    <div class="{% unless forloop.first %} mt-20 {% endunless %}">
+        <h3 class="serif-md text-medium text-center mb-8">{{ item.name_html }}</h3>
+        <div class="grid grid-cols-2 gap-16">
+            <div class="grid grid-cols-2 {% cycle 'order-first', 'order-last' %}">
+                <div class="bg-image-style border border-light"
+                    style="background-image: url('{{ item.image-1.background_image }}'); background-position: {{ item.image-1.image_focus }};">
+                </div>
+                <div class="bg-image-style border border-light"
+                    style="background-image: url('{{ item.image-2.background_image }}'); background-position: {{ item.image-2.image_focus }};">
+                </div>
             </div>
-            <div class="bg-image-style border border-light"
-                style="background-image: url('{{ item.image-2.background_image }}'); background-position: {{ item.image-2.image_focus }};">
+            <div id="content" class="col-span-1 {% cycle 'text-left', 'text-right' %}">
+                <p>{{ item.description_html }}</p>
             </div>
         </div>
-        <div id="content" class="col-span-2 {% cycle 'text-left', 'text-right' %}">
-            <h3 class="serif-md text-medium">{{ item.name_html }}</h3>
-            <p>{{ item.description_html }}</p>
-        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </section>
 
 
